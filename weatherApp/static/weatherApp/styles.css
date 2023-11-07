@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', Courier, monospace;
+  }
+h4{
+    margin: 0px;
+}
+
+p{
+    margin: 0px;
+    font-size: 17px;
+}
+
+.c1 {
+    width: 65%;
+    float: left;
+    height: 100vh;
+    color: white;
+}
+
+.c2 {
+    display: flex;
+    align-self: right;
+    margin-right: 0px;
+    color: black;
+    width: 35%;
+    height: 100vh;
+    background: rgba(49, 53, 49, 0.7)
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    width: 25vw;  
+    font-size: 2vw;  
+    border-color: transparent;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 48px;
+    
+}
+
+.search::placeholder {
+    color: rgb(210, 194, 194);
+}
+
+.break {
+    border-bottom: 1px solid #3c4043;
+    margin-top: 7vh;
+    width: 32vw;
+    margin-left: 3.5vw;
+}
+.search:focus {
+    outline: none;
+}
+
+.search-icon {
+    background-color: grey;
+    position: absolute;
+    right: 0%;
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mag {
+    width: 2%;
+    position: absolute;
+    right: 0;
+    margin-right: 10rem;
+    margin-top: 4rem;
+    
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 65px;
+    margin-left: 2vw;
+    margin-top: 1px;
+}
+
+.temp {
+    font-size: 200px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.city {
+    height: 71px;
+    font-size: 60px;
+    align-self: center;
+    margin-left: 2vw;
+}
+
+.break {
+    border-bottom: 1px solid #3c4043;
+    display: block;
+    width: auto;
+    margin-left: -10px;
+}
+
+.default {
+    color: rgb(210, 194, 194);
+    margin-top: 192px;
+    margin-left: 43px;
+    font-size: 1vmax;
+    height: fit-content;
+}
+
+h3 {
+    padding: 5px;
+}
+
+
+.material-icons {
+    position: absolute;
+    right: 0;
+    padding: 49px;
+}
+
+.material-icons:after {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.weather-specific {
+    color: rgb(210, 194, 194);
+    margin-left: 110px;
+    font-size: 1vmax;
+    position: absolute;
+    left: 61.8vw;
+    bottom: 20vh;
+}
+
+.weather-specific-2 {
+    color: rgb(210, 194, 194);
+    margin-left: 6vw;
+    font-size: 1vmax;
+    position: absolute;
+    left: 86vw;
+    bottom: 20vh;
+}
+
+#general {
+    color: transparent;
+    font-size: 0px;
+}
+
+.type {
+    padding-top: 30px;
+}
+

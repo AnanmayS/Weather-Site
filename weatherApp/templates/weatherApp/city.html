@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {{cityName}} Weather
+        </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link href="{% static 'weatherApp/styles.css'%}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="{% static 'weatherApp/script.js' %}"></script>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="c1">
+                <div class="info">
+                    <div class="temp">{{temperature}}&#176;</div>
+                    <div class="city">  
+                        <h4>{{cityName}}</h4>
+                        <p>{{text}}</p>
+                        <p>{{date}}</p>
+                        <p id='general'>{{main}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="c2">
+                <form action="{% url 'index' %}" method="POST" autocomplete="off" > {% csrf_token %}
+                <input id="search" type="text" name="city_name" placeholder="Search City"/>
+            </form>
+                <div class="default">
+                    <form action="{% url 'userLoco' %}" method="POST">{% csrf_token %}
+                        <button type="submit" class="btn btn-secondary btn-lg">Current Location</button>
+                </div>
+                
+                <div class="weather-specific">
+                    <h3 class="type">Cloudy</h3>
+                    <h3 class="type">Humidity</h3>
+                    <h3 class="type">Wind</h3>
+                    <h3 class="type">High</h3>
+                    <h3 class="type">Low</h3>
+                </div>
+                <hr>
+                <div class="weather-specific-2">
+                    <h3 class="type">{{cloud}}&#37;</h3>
+                    <h3 class="type">{{humid}}&#37;</h3>
+                    <h3 class="type">{{wind}} mph</h3>
+                    <h3 class="type">{{High}}&#176;</h3>
+                    <h3 class="type">{{Low}}&#176;</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
